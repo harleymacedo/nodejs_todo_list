@@ -1,3 +1,28 @@
-<view>
-    <h2>Login</h2>
-</view>
+<style>
+    body {
+        background-image: url('/img/book3.jpg')
+    }
+</style>
+<div class="container">
+
+    <div class="row justify-content-center">
+        <div class="col-6 text-align-center">
+            <h2>ToDo List - IFCE</h2>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+
+        <div class="col-6" style="background-color: blueviolet; height: 16rem">
+            <form class="form" action="/home" method="POST">
+                <label>Usuário: <input class="form-control" type="text" name="usuario" placeholder="Nome ou email" /></label>
+                <label>Senha: <input class="form-control" type="password" name="senha" placeholder="Senha" /></label>
+                <input class="btn btn-primary" type="submit" value="Entrar">
+            </form>
+        </div>
+    </div>
+    <div>
+        <button class="btn btn-secondary" >Cadastrar</button>
+    </div>
+   
+</div>

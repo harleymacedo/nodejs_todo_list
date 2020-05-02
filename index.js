@@ -7,10 +7,15 @@ const methodOverride = require('method-override')
 app.engine('handlebars', handleBars({defaultLayout: 'main'}))
 app.set('view engine', 'handlebars')
 
+app.use(bodyParser.urlencoded({extended: false}))
 app.use(express.static(__dirname + '/public'))
 
 app.get('/', (req, res) => {
-    res.send('login')
+    res.render('login')
+})
+app.post('/home', (req, res) => {
+    let usuario = req.body.usuario
+    res.render('home', {userName: usuario})
 })
 
 app.listen(3000, () => {
