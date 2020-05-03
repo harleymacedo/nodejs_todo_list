@@ -20,6 +20,9 @@
             <p><a href="#"><img src="https://img.icons8.com/wired/32/000000/help.png"/></a></p>
         </div>
         <div class="col-10">
+            {{#each dados.rows}}
+                <p>{{this}}</p>
+            {{/each}}
             <table class="table table-striped">
                 <tr>
                     <td>Dado</td><td>Dado</td><td>Dado</td><td>Dado</td>

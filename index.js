@@ -3,6 +3,7 @@ const app = express()
 const handleBars = require('express-handlebars')
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
+const router = require('./routers/routers')
 
 app.engine('handlebars', handleBars({defaultLayout: 'main'}))
 app.set('view engine', 'handlebars')
@@ -15,7 +16,7 @@ app.get('/', (req, res) => {
 })
 app.post('/home', (req, res) => {
     let usuario = req.body.usuario
-    res.render('home', {userName: usuario})
+    router.obterTareras(req, res, usuario)
 })
 
 app.listen(3000, () => {

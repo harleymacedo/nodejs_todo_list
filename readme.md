@@ -10,3 +10,4 @@ Banco de dados:
         estado boolean not null
     );
 3. Insira alguns dados
+4. Modificar os dados da conexão usando o padrão: 'postgresql://dbuser:secretpassword@database.server.com:3211/mydb'
