@@ -5,24 +5,24 @@
 </style>
 <div class="container">
 
-    <div class="row justify-content-center" style="height: 30%;">
-        <div class="col-6 d-inline-block">
+    <div class="row d-flex justify-content-center">
+        <div class="col-6 text-center" style="height: 100px;">
             <h2>ToDo List - IFCE</h2>
         </div>
     </div>
 
     <div class="row justify-content-center">
 
-        <div class="col-6 h-70 d-inline-block" style="background-color: rgba(80, 60, 50, 0.4);">
+        <div class="col-6 d-flex justify-content-center" style="background-color: rgba(109, 60, 35, 0.4); height: 300px">
             <form class="form" action="/home" method="POST">
-                <label>Usuário: <input class="form-control" type="text" name="usuario" placeholder="Nome ou email" /></label>
-                <label>Senha: <input class="form-control" type="password" name="senha" placeholder="Senha" /></label>
-                <input class="btn btn-primary" type="submit" value="Entrar">
+                <p><label>Usuário: <input class="form-control" type="text" name="usuario" placeholder="Nome ou email" /></label></p>
+                <p><label>Senha: <input class="form-control" type="password" name="senha" placeholder="Senha" /></label></p>
+                <p><input class="btn btn-primary" type="submit" value="Entrar"></p>
             </form>
         </div>
     </div>
-    <div>
-        <button class="btn btn-secondary" >Cadastrar</button>
+    <div class="row justify-content-center">
+        <button class="btn btn-secondary mt-20" >Cadastrar</button>
     </div>
    
 </div>
