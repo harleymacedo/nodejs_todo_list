@@ -1,8 +1,11 @@
 const {Pool} = require('pg')
-const strConnection = process.env.URI_BANCO
 
 const con = new Pool({
-    connectionString: strConnection,
+    user: 'harleymacedo',
+    host: 'localhost',
+    database: 'todo-list',
+    password: '',
+    port: 5432,
 })
 
 module.exports = con

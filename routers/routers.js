@@ -2,13 +2,17 @@ const con = require('../models/connection')
 
 const router = {
     obterTareras: async (req, res, usuario) => {
-        try{
-            let strQuery = 'select * from tarefa'
+        try{            
             await con.connect()
-            await con.query(strQuery, (err, result) => {
-                if (result !== null)
-                console.log(result)
-                res.render('home', {dados: result, userName: usuario})
+            await con.query('select * from tarefa', (err, result) => {
+                if (err) {
+                    console.log(err.toString())
+                } else {
+                    if (result !== null)
+                        res.render('home', {dados: result, userName: usuario})
+                    else
+                        res.render('login')
+                }
             })
         } catch(err) {
             console.log(err.toString())
