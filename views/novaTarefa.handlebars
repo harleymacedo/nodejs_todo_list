@@ -6,7 +6,8 @@
     </div>
     <div class="row">
         <div class="col-8">
-            <form>
+            <form method="POST" action="/cadastrarTarefa">
+                <label>ID:<input class="form-control" type="text" name="id" /></label>
                 <label>Título:<input class="form-control" type="text" name="titulo" /></label>
                 <label>Descrição:<input class="form-control" type="text" name="descricao" /></label>
                 <label>Estado:
@@ -16,7 +17,13 @@
                         <option>Feito</option>
                     </select>
                 </label>
+                <input type="submit" value="Cadastrar" class="btn btn-primary" />
             </form>
         </div>
+        {{#if mensagem}}
+            <div class="alert alert-warning">
+                {{mensagem}}
+            </div>
+        {{/if}}
     </div>
 </div>

@@ -17,6 +17,23 @@ const router = {
         } catch(err) {
             console.log(err.toString())
         }
+    },
+
+    cadastrarTarefa: async (req, res, tarefa) => {
+        try {
+            await con.connect()
+            await con.query("insert into tarefa (id, titulo, descricao, estado) values (28, 'titulo', 'descricao', false)", (err, result) => {
+                if (err) { 
+                    console.log(err.toString())
+                    res.render('novaTarefa', {mensagem: 'Erro ao cadastrar'})
+                } else {
+                    //res.redirect('/novaTarefa')
+                    res.render('novaTarefa', {mensagem: 'Cadastrado com sucesso'})
+                }
+            })
+        } catch(err) {
+            console.log(err.toString())
+        }
     }
 
 }

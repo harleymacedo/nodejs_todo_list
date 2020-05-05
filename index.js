@@ -23,6 +23,11 @@ app.get('/novaTarefa', (req, res) => {
     res.render('novaTarefa')
 })
 
+app.post('/cadastrarTarefa', (req, res) => {
+    let tarefa = {id: req.body.id, titulo: req.body.titulo, descricao: req.body.descricao, estado: req.body.estado}
+    router.cadastrarTarefa(req, res, tarefa)
+})
+
 app.listen(3000, () => {
     console.log('App rodando na porta 3000!')
 })
