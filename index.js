@@ -19,6 +19,10 @@ app.post('/home', (req, res) => {
     router.obterTareras(req, res, usuario)
 })
 
+app.get('/novaTarefa', (req, res) => {
+    res.render('novaTarefa')
+})
+
 app.listen(3000, () => {
     console.log('App rodando na porta 3000!')
 })
